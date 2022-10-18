@@ -8,7 +8,7 @@ class ListOfCountries extends Component{
              <div   className="countries-listFrame">
                 {filteredCountries.map(item => {
                     return(
-                        <div onClick={(e) => handleCardChoose(e)} key={item.country} className="countrySelf">
+                        <div onClick={() => handleCardChoose(item.country)} key={item.country} className="countrySelf">
                             <img src={item.flag} alt='flag' className="search-flag-Country"/>
                             <span className="search-country-name">{item.country}</span>
                         </div>

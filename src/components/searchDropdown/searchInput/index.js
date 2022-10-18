@@ -50,22 +50,12 @@ class InputSearch extends Component{
         
     }
 
-    handleCardChoose = (event) => {
-        
-            if(event.target.tagName == "IMG") {
-                this.setState({
-                    countryName: event.target.parentElement.children[1].innerText
-                }) 
-            } else if (event.target.tagName === "SPAN") {
-                this.setState({
-                    countryName: event.target.parentElement.children[1].innerText
-                }) 
-            } else if (event.target.tagName === "DIV") {
-                this.setState({
-                    countryName: event.target.children[1].innerText
-                }) 
-                
-            }    
+    handleCardChoose = (id) => {
+       const {countries} = this.state;
+       
+       this.setState({
+         countryName: countries.find(item => item.country === id).country
+       })
     }
 
     handleCardCloseBtn = () => {
@@ -86,6 +76,7 @@ class InputSearch extends Component{
                     value={inputValue}
                 />
                 <ListOfCountries 
+                countryName={countryName}
                  filteredCountries={filteredCountries}
                   handleCardChoose={this.handleCardChoose}/>
             </div>
