@@ -4,7 +4,7 @@ class Counter extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            count:  this.props.minValue//this.props.minValue
+            count:  this.props.minValue
         }
         this.handleIncrease =  this.handleIncrease.bind(this);
         this.handleDecrease = this.handleDecrease.bind(this);

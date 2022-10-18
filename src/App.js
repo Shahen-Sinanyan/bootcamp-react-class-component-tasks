@@ -9,9 +9,9 @@ class App extends Component{
 
   render() {
     return(
-      //<Cardlist/>
+      <Cardlist/>
      //<MainAppCounter/>
-      <InputSearch/>
+     // <InputSearch/>
       
     )
   }
